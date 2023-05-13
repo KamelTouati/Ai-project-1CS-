@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --color1: #fac4e6;
+  --color2: #ecd1d5;
+  --color3: #f22853;
+  --color4: #fad459;
+  --color5: #108cff;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* background-color: var(--color4); */
+  background: linear-gradient(var(--color1), var(--color2));
+}
+
+p {
+  /* top:10%; */
+  /* font-size: 500%; */
+  background:transparent;
+}
+.dots{
+  display:inline-block;
+  /* background:white; */
+  height:80px;
+  width:80px;
+  float: left;
+  /* border: 10px solid #333; */
+  border-radius: 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  /* border: 5px solid var(--color4); */
+    
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: var(--color5);
+  box-shadow: 0 4px 30px rgb(241 66 66 / 30%);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.dots2{
+  display:inline-block;
+  /* background:#333; */
+  /* background: var(--color3); */
+  height:80px;
+  width:80px;
+  float: right;
+  border-radius: 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  /* border: 5px solid var(--color4); */
+      
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: var(--color3);
+  box-shadow: 0 4px 30px rgb(241 66 66 / 30%);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.options{
+  height:100px;
+  width: 220px;
+  z-index:2;
+}
+
+td {
+/* border: 10px solid var(--color4); */
+/* background-color: var(--color3); */
+height: 100px;
+width: 100px;
+visibility: hidden;
+border-radius: 10px;
+
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 4px 30px rgb(241 66 66 / 30%);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+table{
+  position:absolute;
+  /* left:50%; */
+  /* margin-left:-90px; */
+  /* top:50%; */
+  z-index:1;
+}
+.main{
+  /* width:100vh; */
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+}
+
+@keyframes spin { 
+  100% { 
+      /* -webkit-transform: rotate(360deg);  */
+      transform:rotate(360deg); 
+  } 
+}
