@@ -1,3 +1,0 @@
-web application using html, css, js, bootstrap, flask
-expert system that suggest for you best PC Software & programs 
-Tic Tac Toe using MinMax Algorithme (search algorithme)
