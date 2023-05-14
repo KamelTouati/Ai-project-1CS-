@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="../css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="../css/index-style.css"> -->
+    <title>AI PROJECT</title>
+</head>
+<body class="position-relative" style="height: 100vh">
+  <div class="position-relative">
+    <!-- <div class="glass position-absolute px-3" style="left: 50px; top: 20px;"><h5 style="cursor: pointer;">Home</h5></div> -->
+    <button type="button" class="btn position-absolute m-5" style="background-color: rgb(32 73 92); color: white; top: 20px;">Home</button>
+    <img class="img-fluid" src="{{ url_for('static', filename='assets/background.jpg') }}" alt="">
+    <div class="position-absolute text-white text-content glass p-3" >
+      <h1 class="my-3">Artificial Intelligence Project</h1>
+      <!-- <h1>1cs</h1> -->
+      <!-- <h6>we made for you a web application : Expert System (Seggestion bla bla bla) & Tic Tac Toe (with MinMax Algorithme Search)</h6> -->
+      <h6 class="lh-base">A web application that contain two sections</h6>
+      <h6 class="lh-base">First section : an expert system that suggest for you best PC Software & programs is a specialized software application that utilizes artificial intelligence techniques to provide knowledgeable recommendations and guidance to users seeking appropriate software solutions for their specific needs. It combines a vast database of software information with intelligent algorithms to analyze user requirements and make personalized recommendations</h6>
+      <h6 class="lh-base">Second section : Tic Tac Toe game using MinMax search Algorithm</h6>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center flex-column align-items-center p-5">
+    <h4 class="text-black m-3">Choose one of those application :</h4>
+    <div class="d-flex justify-content-around flex-row align-items-center">
+      <a class='text-decoration-none' href="{{ url_for('tictactoe') }}">
+        <div class="card me-5 p-2" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='assets/c.png') }}" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </a>
+      <a class='text-decoration-none' href="{{ url_for('expertsystem') }}">
+        <div class="card ms-5 p-2" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='assets/d.png') }}" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/all.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- <script src="../js/all.min.js"></script> -->
+  <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
+

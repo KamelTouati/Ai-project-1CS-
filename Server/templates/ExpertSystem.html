@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/expert-system.css') }}">
+    
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="../css/expert-system.css"> -->
+    <title>Expert System</title>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center" >
+    <h1>Expert System</h1>
+    <div class="alert alert-primary" role="alert">
+        suggest for you best PC Software & programs is a specialized software application
+    </div>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <!-- <h3>suggest for you best PC Software & programs is a specialized software application</h3> -->
+    <div class="d-flex flex-row">
+        <div class="p-5 m-5 first-section">
+            <form method="POST" action="/expert-system">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="...">
+                </div>
+                <div class="mb-3">
+                    <label for="operatingSystem" class="form-label">Select the operating system : </label>
+                    <select name="operatingSystem" id="operatingSystem" class="form-select mb-5" aria-label="Default select example" >
+                        <option value="Windows">Windows</option>
+                        <option value="Linux">Linux</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="softwareType" class="form-label">Select type of the software : </label>
+                    <select name="softwareType" id="softwareType" class="form-select mb-5" aria-label="Default select example">
+                        <option value="Design">Design</option>
+                        <option value="hack">hack</option>
+                        <option value="ai">ai</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="softwarePrice" class="form-label">Select price of the software : </label>
+                    <select name="softwarePrice" id="softwarePrice" class="form-select mb-5" aria-label="Default select example">
+                        <option value="Free">Free</option>
+                        <option value="Payent">Payent</option>
+                        <!-- <option value="3">Three</option> -->
+                    </select>
+                </div>
+                <input class='btn btn-primary' type="submit" value="Register">
+            </form>
+        </div>
+
+        <div class="p-5 m-5 second-section">
+            <select class="form-select my-5" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <select class="form-select my-5" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <select class="form-select my-5" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
