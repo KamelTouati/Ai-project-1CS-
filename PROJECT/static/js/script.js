@@ -28,8 +28,8 @@ $(document).ready(function() {
   var round = 0;
   // var aiCo = "white";
   // var huCo = "#333";
-  var aiCo = "#f22853";
-  var huCo = "#108cff";
+  var aiCo = "#108cff";
+  var huCo = "#f22853";
   
   function move(element, player, color) {
     console.log("element"+ element.id);

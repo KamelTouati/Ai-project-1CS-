@@ -15,12 +15,6 @@
 body {
   background-color: var(--color1) ;
 }
-.text-content {
-  width: 600px; 
-  top: 50%; 
-  left: 100px; 
-  transform: translate(0, -50%);
-}
 
 .card {
   box-shadow: 0 4px 30px rgb(0 0 0 / 10%);

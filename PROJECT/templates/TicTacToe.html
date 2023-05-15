@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tictactoe-style.css') }}">
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
-    <script src="{{ url_for('static', filename='js/jQuery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
 
     <!-- <script src="../js/jQuery.min.js"></script> -->
     <!-- <script src="../js/script.js"></script> -->
     <title>Tic Tac Toe</title>
 </head>
-<body style="position: relative;">
+<body class="position-relative">
+    <a href="{{url_for('index')}}" type="button" class="btn position-absolute m-5" style="background-color: rgb(175 0 47); color: white; top: 20px;">Back to Home</a>
     <div class="main">
-      <table>
+      <table style="border-collapse: unset;">
         <tr>
           <td class="cell" id="0"></td>
           <td class="cell" id="1"></td>
@@ -34,9 +35,9 @@
         </tr>
       </table>
       <!-- <h1 class='title' style="color:var(--color3)">Tic Tac Toe GAME</h1> -->
-      <img class='title' src="../assets/c.png" style="width: 300px;" alt="">
-      <img src="{{ url_for('static', filename='assets/a.png') }}" style="width: 250px; position: absolute; right: 0; animation:spin 8s linear infinite;" alt="">
-      <img src="{{ url_for('static', filename='assets/b.png') }}" style="width: 250px; position: absolute; left: 0; animation:spin 8s linear infinite;" alt="">
+      <img class='title' src="{{ url_for('static', filename='assets/c.png') }}" style="width: 300px;" alt="">
+      <img class="d-none d-lg-block" src="{{ url_for('static', filename='assets/a.png') }}" style="width: 250px; position: absolute; right: 100px; animation:spin 8s linear infinite;" alt="">
+      <img class="d-none d-lg-block" src="{{ url_for('static', filename='assets/b.png') }}" style="width: 250px; position: absolute; left: 100px; animation:spin 8s linear infinite;" alt="">
       <h2>Choose :</h2>
       <div class="options">
         <div class="dots">
@@ -47,7 +48,9 @@
         </div>
       </div>
     </div>
-
-</body>
+    <script src="{{ url_for('static', filename='js/jQuery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
 </html>
 

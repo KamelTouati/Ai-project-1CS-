@@ -14,11 +14,11 @@
     <title>AI PROJECT</title>
 </head>
 <body class="position-relative" style="height: 100vh">
-  <div class="position-relative">
-    <!-- <div class="glass position-absolute px-3" style="left: 50px; top: 20px;"><h5 style="cursor: pointer;">Home</h5></div> -->
-    <button type="button" class="btn position-absolute m-5" style="background-color: rgb(32 73 92); color: white; top: 20px;">Home</button>
+  <div class="position-relative mw-100">
     <img class="img-fluid" src="{{ url_for('static', filename='assets/background.jpg') }}" alt="">
-    <div class="position-absolute text-white text-content glass p-3" >
+    <!-- <div class="glass position-absolute px-3" style="left: 50px; top: 20px;"><h5 style="cursor: pointer;">Home</h5></div> -->
+    <!-- <a href='{{url_for("index")}}' type="button" class="btn position-absolute m-5" style="background-color: rgb(32 73 92); color: white; top: 20px;">Home</a> -->
+    <div class="position-absolute text-white text-content glass p-3 lg-start-0 top-50 start-50 translate-middle d-none d-md-block" >
       <h1 class="my-3">Artificial Intelligence Project</h1>
       <!-- <h1>1cs</h1> -->
       <!-- <h6>we made for you a web application : Expert System (Seggestion bla bla bla) & Tic Tac Toe (with MinMax Algorithme Search)</h6> -->
@@ -28,10 +28,10 @@
     </div>
   </div>
   <div class="d-flex justify-content-center flex-column align-items-center p-5">
-    <h4 class="text-black m-3">Choose one of those application :</h4>
-    <div class="d-flex justify-content-around flex-row align-items-center">
+    <h6 class="text-black m-3">Choose one of those application :</h6>
+    <div class="d-flex justify-content-around flex-column flex-lg-row  align-items-center">
       <a class='text-decoration-none' href="{{ url_for('tictactoe') }}">
-        <div class="card me-5 p-2" style="width: 18rem;">
+        <div class="card me-lg-5 mb-3 p-2" style="width: 18rem;">
           <img src="{{ url_for('static', filename='assets/c.png') }}" class="img-fluid card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -39,7 +39,7 @@
         </div>
       </a>
       <a class='text-decoration-none' href="{{ url_for('expertsystem') }}">
-        <div class="card ms-5 p-2" style="width: 18rem;">
+        <div class="card ms-lg-5 mt-3 p-2" style="width: 18rem;">
           <img src="{{ url_for('static', filename='assets/d.png') }}" class="img-fluid card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
