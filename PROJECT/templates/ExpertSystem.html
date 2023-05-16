@@ -36,23 +36,27 @@
                 <div class="mb-3">
                     <label for="operatingSystem" class="form-label">Select the operating system : </label>
                     <select name="operatingSystem" id="operatingSystem" class="form-select mb-5" aria-label="Default select example" >
-                        <option value="Windows">Windows</option>
-                        <option value="Linux">Linux</option>
+                        {% for sys in System %}
+                            <option value={{sys}}>{{sys}}</option>
+                        {% endfor %}
+                        <!-- <option value="Linux">Linux</option> -->
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="softwareType" class="form-label">Select type of the software : </label>
                     <select name="softwareType" id="softwareType" class="form-select mb-5" aria-label="Default select example">
-                        <option value="Design">Design</option>
-                        <option value="hack">hack</option>
-                        <option value="ai">ai</option>
+                        {% for Cat in Category %}
+                            <option value={{Cat}}>{{Cat}}</option>
+                        {% endfor %}
+
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="softwarePrice" class="form-label">Select price of the software : </label>
                     <select name="softwarePrice" id="softwarePrice" class="form-select mb-5" aria-label="Default select example">
-                        <option value="Free">Free</option>
-                        <option value="Payent">Payent</option>
+                        {% for Pr in Price %}
+                            <option value={{Pr}}>{{Pr}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <input class='btn btn-primary' type="submit" value="Register">
@@ -71,9 +75,11 @@
                 </div>
                 <div class="alert alert-primary" role="alert">
                     <h5>I recommend for you :</h5>
-                    <h6>blablabla</h6>
-                    <h6>blablabla</h6>
-                    <h6>blablabla</h6>
+                    {% if results %}
+                        {% for result in results %}
+                            <h6>{{result}}</h6> 
+                        {% endfor %}
+                    {% endif %}
                 </div>
             {% endif %}
 
