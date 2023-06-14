@@ -1,0 +1,10 @@
+A Minimax algorithm can be best defined as a recursive function that does the following things:
+
+-return a value if a terminal state is found (+10, 0, -10)
+-go through available spots on the board
+-call the minimax function on each available spot (recursion)
+-evaluate returning values from function calls
+-and return the best value
+
+To work with the Tic Tac Toe board more easily, you should define it as an array with 9 items.
+Each item will have its index as a value. 

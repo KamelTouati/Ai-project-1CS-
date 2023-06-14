@@ -5,15 +5,11 @@ $(document).ready(function() {
       $("td").css("visibility", "visible");
       aiCo = "#f22853";
       huCo = "#108cff";
-      // aiCo = "#333";
-      // huCo = "white";
-      console.log("white");
     });
     $(".dots2").click(function() {
       $(".options, h2").css("visibility", "hidden");
       $(".title").css("visibility", "hidden");
       $("td").css("visibility", "visible");
-      console.log("black");
     });
   
     $("td").click(function() {
@@ -26,8 +22,6 @@ $(document).ready(function() {
   var aiPlayer = "C";
   var iter = 0;
   var round = 0;
-  // var aiCo = "white";
-  // var huCo = "#333";
   var aiCo = "#108cff";
   var huCo = "#f22853";
   
